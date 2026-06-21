@@ -107,7 +107,7 @@ const getProjectContent = (slug: string): Project | null => {
 
 const getGalleryImages = (path: string) => {
     const files = fs.readdirSync(path)
-    const imageFiles = files.filter((file) => !file.includes('_blurred') && (file.endsWith('.jpg') || file.endsWith('webp') || file.endsWith('jpeg') || file.endsWith('png')))
+    const imageFiles = files.filter((file) => !file.includes('_blurred') && (file.endsWith('.jpg') || file.endsWith('webp') || file.endsWith('jpeg') || file.endsWith('png') || file.endsWith('gif')))
     return imageFiles
 }
 
@@ -139,7 +139,7 @@ const ProjectPage = async ({ params }: any) => {
 			    <PostHeader headerNumber={1.5}>Gallery</PostHeader>
 			    <div style={{ display: 'flex', flexWrap: 'wrap' }}>
 				{project.gallery.map((imagePath: string) => {
-				    return <div key={imagePath} style={{ margin: '0.5rem', width: '45%', height: 'auto' }}>
+				    return <div key={imagePath} style={project.gallery.length > 1 ? { margin: '0.5rem', width: '45%', height: 'auto' } : { margin: '0.5rem', width: '95%', height: 'auto' }} >
 					<Image src={project.gallery_path.split('public')[1] + imagePath} alt={imagePath} className='sm-display-none scale-image' imgStyle={{ width: '100%', height: '100%', borderRadius: '0.5rem', border: '1px solid var(--secondary-light)' }} />
 				    </div>
 				})}	

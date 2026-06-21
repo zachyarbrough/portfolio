@@ -59,7 +59,7 @@ const HomePage: NextPage = () => {
 		    </ul>
 		    <DropdownList startExpanded={false} title="More Info" style={{ margin: '1rem 0 0 0' }}>
 			<p style={{ paddingTop: '1rem' }}>Check out my personal setup and workflow in my <ExternalLink href='https://github.com/ZachYarbrough/dotfiles'>dotfiles</ExternalLink> repo.</p>
-			<p style={{ padding: '0.5rem 0' }}>Currently Reading: <ExternalLink href='https://www.goodreads.com/book/show/44492287-heretics-of-dune'>Heretics of Dune - Frank Herbert</ExternalLink></p>
+			<p style={{ padding: '0.5rem 0' }}>Currently Reading: <ExternalLink href='https://www.goodreads.com/book/show/68428.Mistborn'>Mistborn: The Final Empire - Brandon Sanderson</ExternalLink></p>
 		    </DropdownList>
 		</div>
 		<div className='flex justify-between'>
@@ -67,7 +67,7 @@ const HomePage: NextPage = () => {
 		<div style={{ margin: '1rem 0', width: '100%' }}>
 		    <div className='flex justify-between item-center' style={{ margin: '0 0 1rem 0' }}>
 		    <PostHeader headerNumber={1.5} noCopy={true}>Featured Projects</PostHeader>
-		    {projectPreviews.length > 2 && <InternalLink parentClass='arrow-link' style={{ marginTop: '1rem' }} href='/projects'>View More <span className='arrow' style={{ marginLeft: '0.5rem'}}>→</span></InternalLink>}
+		    <InternalLink parentClass='arrow-link' style={{ marginTop: '1rem' }} href='/projects'>View More <span className='arrow' style={{ marginLeft: '0.5rem'}}>→</span></InternalLink>
 		    </div>
 		    <div className ='flex-wrap' style={{ display: 'flex', justifyContent: 'space-between' }}>
 			{projectPreviews}

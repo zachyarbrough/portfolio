@@ -9,7 +9,7 @@ source: https://github.com/zachyarbrough/sorting-visualizer
 live: https://sorting-visualizer-m8cx.vercel.app
 preview: /images/sorting-visualizer/sorting-visualizer-preview.webp
 related: [sorting-visualizer-retrospective]
-featured: true
+featured: false
 ---
 
 # Overview

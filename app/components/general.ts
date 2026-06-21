@@ -46,7 +46,7 @@ export const getTableOfContents = (headers: string[], isProject: boolean = false
             currentHeaderLevel = headerLevel
             if (!tableOfContents[currentSection.text]) {
                 tableOfContents[currentSection.text] = currentSection
-            } else {
+            } else if (!isProject) {
                 tableOfContents[`${currentSection.text}-${index}`] = currentSection
             }
 
